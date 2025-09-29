@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    word-break: break-word;
+}
+
+a:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Main content centrado */
+.main-content {
+    width: 100%;
+}
+
+.main-header {
+    margin-bottom: 40px;
+}
+
+.header-content {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.main-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    cursor: default;
+    margin-top: 20px;
+}
+
+.subtitle {
+    font-size: 25px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    font-style: italic;
+}
+
+/* Contenedor de controles */
+.controls-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilos del buscador */
+.search-container {
+    display: flex;
+    gap: 10px;
+    align-items: left;
+}
+
+.search-input {
+    padding: 10px 15px;
+    border: 1px solid #e1e5e9;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    min-width: 250px;
+    transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #004499;
+}
+
+/* Estilos del dropdown de filtro */
+.filter-container {
+    display: flex;
+    align-items: center;
+}
+
+.month-filter {
+    padding: 10px 15px;
+    border: 1px solid #e1e5e9;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    color: #1a1a1a;
+    min-width: 200px;
+    cursor: pointer;
+}
+
+
+.post-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0066cc;
+    margin-bottom: 30px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    transition: color 0.2s ease;
+    cursor: default;
+}
+
+.post-title:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+.post-meta {
+    font-size: 0.99rem;
+    color: #555;
+    margin-top: -25px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.post-content {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #374151;
+    max-width: none;
+}
+
+.post-content p {
+    margin-bottom: 24px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #374151;
+    cursor: default;
+}
+
+.post-content p:last-child {
+    margin-bottom: 0;
+    margin-bottom: 2em;
+}
+
+.post-content p:first-child {
+    font-size: 17px;
+    font-weight: 400;
+    color: #374151;
+    line-height: 1.7;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 18px;
+}
+
+/* Estilos para imágenes de posts */
+.post-image-container {
+    margin: 0 0 25px 0;
+}
+
+.post-image {
+    max-width: 70%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.post-image:hover {
+    filter: grayscale(0%);
+}
+
+.blog-post {
+    margin-bottom: 60px;
+    padding: 30px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .controls-container {
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .search-input {
+        min-width: auto;
+        flex: 1;
+    }
+
+    .month-filter {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .main-title {
+        font-size: 36px;
+    }
+
+    .post-title {
+        font-size: 28px;
+    }
+
+    .blog-post {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 15px;
+    }
+
+    .main-title {
+        font-size: 32px;
+    }
+
+    .post-title {
+        font-size: 24px;
+    }
+
+    .post-content {
+        font-size: 16px;
+    }
+
+    .post-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+}
